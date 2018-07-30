@@ -1,0 +1,28 @@
+html
+  +respond-below(md)
+    font-size: 80%
+  +respond-below(sm)
+    font-size: 70%
+body
+  margin: 0
+  font-family: 'Lato', sans-serif
+  min-height: 100vh
+  color: $black
+  width: 100%
+  .container
+    width: 100%
+    display: flex
+    justify-content: center
+    .wrapper
+      position: relative
+      width: 800px
+      padding: 2rem 0
+      +respond-below(md)
+        width: 700px
+      +respond-below(sm)
+        width: 90%
+
+h1, h2, h3
+  font-family: 'Merriweather', serif
+  color: $white
+  font-weight: 900

@@ -1,0 +1,55 @@
+@import '~src/sass/common/variables'
+\:host
+  display: inline-block
+  width: 100%
+  .post
+    background-color: rgba($orange, 0)
+    padding: 1rem
+    margin-bottom: 3rem
+    border-radius: 5px
+    box-shadow: 0 0 70px 0 rgba($black, .2)
+    &__header
+      border-bottom: 2px solid rgba($orange, .5)
+      padding-bottom: 1rem
+      &__title
+        font-weight: 500
+        font-size: 1.2rem
+      &__user
+        margin-top: .2rem
+
+        font-style: italic
+        p
+          display: inline-block
+        &__name
+          opacity: .7
+          font-weight: 800
+        &__email
+          margin-left: 5px
+          opacity: .5
+
+    &__body
+      padding: 1rem 0
+
+    &__comments
+      border-top: 2px solid rgba($orange, .5)
+      padding-top: 1rem
+      &__empty
+        width: 100%
+        padding: .5rem
+        font-size: 1.5rem
+        opacity: .4
+        font-weight: 700
+        font-style: italic
+        text-align: center
+      &__btn
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: .5rem
+        opacity: .7
+        &:hover
+          cursor: pointer
+        span
+          margin-right: 5px
+

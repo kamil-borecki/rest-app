@@ -1,0 +1,3 @@
+<div class="list" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" [@list]='list.length'>
+  <app-post *ngFor="let post of list" [post]="post"></app-post>
+</div>
