@@ -1,0 +1,21 @@
+.pagination
+  display: inline-block
+  width: 100%
+  margin-top: 2rem
+  text-align: center
+  li
+    a, &.current
+      display: flex
+      min-width: 2rem
+      height: 2rem
+      justify-content: center
+      align-items: center
+      padding: 0
+      margin: .2rem
+    &.current
+      display: inline-flex
+      background-color: $violet
+    &.pagination-next, &.pagination-previous
+      a
+        padding: 0 .5rem
+

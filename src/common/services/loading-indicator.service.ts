@@ -6,6 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class LoadingIndicatorService {
   private isLoading: BehaviorSubject<boolean> = new BehaviorSubject(false);
+
   constructor() { }
 
   get isLoading$(): Observable<boolean> {
@@ -14,7 +15,7 @@ export class LoadingIndicatorService {
   show() {
     this.isLoading.next(true);
   }
-  hide(){
+  hide() {
     this.isLoading.next(false);
   }
 }

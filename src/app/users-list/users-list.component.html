@@ -1,0 +1,22 @@
+<h2 class="header">Users</h2>
+<div class="actions">
+  <input type="search" [(ngModel)]="query" id="" placeholder="Type to search">
+  <label for="itemsPerPage"> Items per page:</label>
+  <input type="number" id="itemsPerPage" [ngModel]="itemsPerPage" (ngModelChange)="setItemsPerPage($event)">
+</div>
+<div class="table">
+  <div class="head">
+    <div class="row">
+      <div *ngFor="let column of searchIn" class="cell" (click)="setOrder(column)">
+        <span>{{column}}</span>
+        <i *ngIf="orderQuery.column == column" class="fas" [ngClass]="{'fa-chevron-up': orderQuery.order == 'asc','fa-chevron-down': orderQuery.order == 'desc' }"></i>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="row" *ngFor="let user of users | search:{search: query, searchIn: searchIn} | orderBy:orderQuery | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+      <div class="cell" *ngFor="let column of searchIn">{{user[column]}}</div>
+    </div>
+  </div>
+</div>
+<pagination-controls class="pagination" (pageChange)="currentPage = $event"></pagination-controls>

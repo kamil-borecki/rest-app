@@ -1,3 +1,5 @@
-<div class="list" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" [@list]='list.length'>
+<h2 class="header">Posts feed</h2>
+<div class="list" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1000" (scrolled)="onScroll()" [@list]='list.length'>
   <app-post *ngFor="let post of list" [post]="post"></app-post>
+  <app-loading-indicator></app-loading-indicator>
 </div>

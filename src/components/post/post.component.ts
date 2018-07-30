@@ -24,7 +24,7 @@ export class PostComponent implements OnInit {
       });
       this.userService.get(this.post.userId).subscribe((data: User) => {
         this.user = data;
-      })
+      });
     }
   }
   toggleComments() {

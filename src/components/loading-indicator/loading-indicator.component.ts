@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LoadingIndicatorService } from '../../common/services';
+import { LoadingIndicatorService } from 'src/common/services';
 
 @Component({
   selector: 'app-loading-indicator',

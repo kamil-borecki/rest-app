@@ -8,7 +8,7 @@ import { Comment } from 'src/common/models';
 })
 export class CommentComponent {
   @Input() public comment: Comment;
-  constructor() { }
 
+  constructor() { }
 
 }

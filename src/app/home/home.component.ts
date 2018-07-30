@@ -13,7 +13,7 @@ import { listTransition } from 'src/common/animations';
 export class HomeComponent implements OnInit {
   public list: Post[] = [];
   private posts: Post[] = [];
-  private count = 5;
+  private count = 3;
   constructor(private postService: PostService, private toastSErvice: ToastrService) { }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   onScroll() {
     console.log('scrolled!!');
     if (this.count < this.posts.length) {
-      this.count += 5;
+      this.count += 1;
       this.list = this.posts.slice(0, this.count);
     }
   }

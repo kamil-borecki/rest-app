@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { menuTransition } from 'src/common/animations';
 
 @Component({
@@ -7,11 +7,7 @@ import { menuTransition } from 'src/common/animations';
   styleUrls: ['./menu.component.sass'],
   animations: [menuTransition]
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

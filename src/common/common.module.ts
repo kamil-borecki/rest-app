@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders, ErrorHandler } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 
-import { KeysPipe } from './pipes';
+import { KeysPipe, SearchPipe, OrderByPipe } from './pipes';
 import { UserService, PostService, CommentService, LoadingIndicatorService } from './services';
 import { HttpRequestInterceptor } from './interceptors';
 import { CustomErrorHandler } from './handlers';
@@ -24,9 +24,9 @@ const PROVIDERS = [
 ];
 
 @NgModule({
-  declarations: [KeysPipe],
+  declarations: [KeysPipe, SearchPipe, OrderByPipe],
   imports: [HttpClientModule, ToastrModule.forRoot()],
-  exports: [KeysPipe]
+  exports: [KeysPipe, SearchPipe, OrderByPipe]
 })
 export class CommonModule {
   static forRoot(): ModuleWithProviders {

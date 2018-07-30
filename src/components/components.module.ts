@@ -1,5 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { CommonModule as NgCommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -20,19 +21,20 @@ const PROVIDERS = [
 ];
 
 @NgModule({
-   declarations: [
-      DECLARATIONS_EXPORTS
-   ],
-   imports: [
-      CommonModule,
-      NgCommonModule,
-      BrowserAnimationsModule,
-      FormsModule,
-      ReactiveFormsModule
-   ],
-   exports: [
-      DECLARATIONS_EXPORTS
-   ]
+  declarations: [
+    DECLARATIONS_EXPORTS
+  ],
+  imports: [
+    CommonModule,
+    NgCommonModule,
+    BrowserAnimationsModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    DECLARATIONS_EXPORTS
+  ]
 })
 
 export class ComponentsModule {
